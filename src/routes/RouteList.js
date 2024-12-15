@@ -1,14 +1,14 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Switch,Route } from 'react-router-dom';
 import OpenFirstFile from '../openFile/OpenFirstFile';
 
 
 function RouteList() {
     return (
         <div>
-            <Routes>
-              <Route path='/' element={<OpenFirstFile/>} />
-            </Routes>
+            <Switch>
+              <Route exact path='/' component={OpenFirstFile}></Route>
+            </Switch>
         </div>
     )
 }
